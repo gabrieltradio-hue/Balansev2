@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balanse barcode scanner</title>
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #0F1B2D; }
+  #box { padding: 2px 2px 6px; }
+  button { font: inherit; padding: 8px 16px; border-radius: 8px; border: 1px solid #0F1B2D; background: #0F1B2D; color: #fff; cursor: pointer; }
+  button.secondary { background: #fff; color: #0F1B2D; }
+  button[hidden] { display: none; }
+  #msg { margin: 8px 0 0; font-size: 14px; line-height: 1.35; }
+  #msg.err { color: #9B1C1C; }
+  #msg.ok { color: #14532D; }
+  #stage { position: relative; margin-top: 8px; max-width: 520px; border-radius: 10px; overflow: hidden; background: #000; }
+  #stage[hidden] { display: none; }
+  video { width: 100%; display: block; max-height: 340px; object-fit: cover; }
+  #aim { position: absolute; inset: 30% 6%; border: 3px solid rgba(255,255,255,.85); border-radius: 12px; pointer-events: none; }
+  #stage.hit #aim { border-color: #22c55e; }
+</style>
+</head>
+<body>
+<div id="box">
+  <button id="start" type="button">Start camera</button>
+  <button id="stop" class="secondary" type="button" hidden>Stop camera</button>
+  <div id="msg" role="status" aria-live="polite">Press Start camera, then allow camera access when your browser asks.</div>
+  <div id="stage" hidden><video id="video" playsinline muted></video><div id="aim"></div></div>
+</div>
+<canvas id="work" hidden></canvas>
+<script>
+(function () {
+  "use strict";
+
+  // ---- Streamlit component protocol (no package needed) ----
+  function send(type, data) {
+    window.parent.postMessage(Object.assign({ isStreamlitMessage: true, type: type }, data || {}), "*");
+  }
+  function setHeight() { send("streamlit:setFrameHeight", { height: document.documentElement.scrollHeight + 4 }); }
+  function setValue(value) { send("streamlit:setComponentValue", { value: value, dataType: "json" }); }
+
+  var startBtn = document.getElementById("start");
+  var stopBtn = document.getElementById("stop");
+  var msgEl = document.getElementById("msg");
+  var stage = document.getElementById("stage");
+  var video = document.getElementById("video");
+  var canvas = document.getElementById("work");
+
+  var stream = null, running = false, detector = null, zxingReader = null, lastCode = "", lastSeen = 0, counter = 0;
+  var COOLDOWN_MS = 2000;   // the same code held in view counts once; take it away for 2 seconds to scan it again
+
+  function say(text, kind) { msgEl.textContent = text; msgEl.className = kind || ""; setHeight(); }
+
+  function explain(err) {
+    var name = err && err.name;
+    if (name === "NotAllowedError" || name === "SecurityError" || name === "PermissionDeniedError")
+      return "Camera access is blocked. Allow the camera for this site in your browser settings (the lock or tune icon next to the address), then press Start camera again. Or add the product by hand below.";
+    if (name === "NotFoundError" || name === "DevicesNotFoundError" || name === "OverconstrainedError")
+      return "No camera was found on this device. Add the product by hand below.";
+    if (name === "NotReadableError" || name === "TrackStartError")
+      return "The camera is being used by another app. Close that app and press Start camera again.";
+    return "The camera could not be started" + (err && err.message ? " (" + err.message + ")" : "") + ". Add the product by hand below.";
+  }
+
+  // Browsers without a built-in barcode reader (most desktop browsers) use the ZXing library, loaded once from jsDelivr.
+  function makeReader() {
+    var hints = new Map();
+    hints.set(window.ZXing.DecodeHintType.POSSIBLE_FORMATS, [window.ZXing.BarcodeFormat.CODE_128]);
+    hints.set(window.ZXing.DecodeHintType.TRY_HARDER, true);
+    zxingReader = new window.ZXing.MultiFormatReader();
+    zxingReader.setHints(hints);
+  }
+  function loadZXing() {
+    return new Promise(function (resolve) {
+      function ready() { try { makeReader(); resolve(true); } catch (e) { resolve(false); } }
+      if (window.ZXing) { ready(); return; }
+      var s = document.createElement("script");
+      s.src = "https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js";
+      s.onload = function () { if (window.ZXing) ready(); else resolve(false); };
+      s.onerror = function () { resolve(false); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function stop(message) {
+    running = false;
+    if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
+    video.srcObject = null;
+    stage.hidden = true; stopBtn.hidden = true; startBtn.hidden = false;
+    if (message) say(message);
+    setHeight();
+  }
+
+  async function start() {
+    if (!window.isSecureContext || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      say("The camera needs a secure page (https). Open the online app link, or run the app on this computer (localhost). You can still add products by hand below.", "err");
+      return;
+    }
+    say("Starting the camera…");
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" } }, audio: false });
+    } catch (err) { say(explain(err), "err"); return; }
+    try {
+      video.srcObject = stream;
+      await video.play();
+    } catch (err) { stop(); say(explain(err), "err"); return; }
+
+    detector = null;
+    if ("BarcodeDetector" in window) {
+      try {
+        var formats = await window.BarcodeDetector.getSupportedFormats();
+        if (formats.indexOf("code_128") !== -1) detector = new window.BarcodeDetector({ formats: ["code_128"] });
+      } catch (e) { detector = null; }
+    }
+    if (!detector) {
+      var ok = await loadZXing();
+      if (!ok) { stop(); say("The barcode reader could not be loaded (check the internet connection). Add the product by hand below.", "err"); return; }
+    }
+    stage.hidden = false; stopBtn.hidden = false; startBtn.hidden = true;
+    running = true;
+    say("Hold the product's barcode flat inside the box.");
+    tick();
+  }
+
+  function found(code) {
+    var now = Date.now();
+    if (code === lastCode && now - lastSeen < COOLDOWN_MS) { lastSeen = now; return; }   // still the same label in view
+    lastCode = code; lastSeen = now; counter += 1;
+    if (navigator.vibrate) { try { navigator.vibrate(60); } catch (e) {} }
+    stage.classList.add("hit"); setTimeout(function () { stage.classList.remove("hit"); }, 400);
+    say("Scanned: " + code, "ok");
+    setValue({ code: code, id: now + "-" + counter });
+  }
+
+  async function tick() {
+    if (!running) return;
+    try {
+      if (video.readyState >= 2 && video.videoWidth > 0) {
+        var code = null;
+        if (detector) {
+          var found_ = await detector.detect(video);
+          if (found_ && found_.length) code = found_[0].rawValue;
+        } else {
+          var w = Math.min(video.videoWidth, 960), h = Math.round(video.videoHeight * (w / video.videoWidth));
+          canvas.width = w; canvas.height = h;
+          canvas.getContext("2d", { willReadFrequently: true }).drawImage(video, 0, 0, w, h);
+          try {
+            var source = new window.ZXing.HTMLCanvasElementLuminanceSource(canvas);
+            code = zxingReader.decode(new window.ZXing.BinaryBitmap(new window.ZXing.HybridBinarizer(source))).getText();
+          } catch (e) { code = null; }      // nothing readable in this frame
+        }
+        if (code) found(code);
+      }
+    } catch (e) { /* one bad frame is fine; try the next one */ }
+    setTimeout(tick, 150);
+  }
+
+  startBtn.addEventListener("click", start);
+  stopBtn.addEventListener("click", function () { stop("Camera stopped. Press Start camera to scan again."); });
+  window.addEventListener("pagehide", function () { stop(); });
+  window.addEventListener("message", function (event) {
+    if (event.data && event.data.type === "streamlit:render") setHeight();
+  });
+  send("streamlit:componentReady", { apiVersion: 1 });
+  setHeight();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+product_name,category,current_stock,unit_cost,lead_time_days
+Jasmine Rice 25 kg (sack),Grocery & Pantry,31,1250.00,3
+Cooking Oil 1 L (case of 12),Grocery & Pantry,20,1080.00,4
+Iodized Salt 500 g (pack of 20),Grocery & Pantry,24,190.00,5
+White Sugar 1 kg (pack of 10),Grocery & Pantry,3,760.00,4
+Instant Noodles (case of 48),Grocery & Pantry,38,520.00,3
+Canned Sardines 155 g (case of 50),Grocery & Pantry,11,1100.00,5
+Soy Sauce 1 L (case of 12),Grocery & Pantry,15,640.00,5
+3-in-1 Coffee Sachets (box of 30),Grocery & Pantry,31,680.00,4
+Bottled Water 500 mL (case of 24),Beverages,0,180.00,3
+Cola 1.5 L (case of 12),Beverages,88,420.00,5
+Orange Juice 1 L (case of 12),Beverages,13,660.00,5
+Iced Tea 500 mL (case of 24),Beverages,30,420.00,5
+Potato Chips 60 g (case of 24),Snacks,126,540.00,4
+Assorted Biscuits (case of 36),Snacks,20,480.00,4
+Chocolate Wafer Bars (box of 48),Snacks,15,610.00,6
+Roasted Peanuts 100 g (pack of 30),Snacks,16,360.00,5
+Shampoo Sachets (box of 144),Personal Care,15,720.00,7
+Bath Soap 90 g (box of 72),Personal Care,2,960.00,7
+Toothpaste 50 g (box of 48),Personal Care,19,1180.00,7
+Deodorant Roll-on (box of 24),Personal Care,6,1320.00,8
+Laundry Powder 1 kg (case of 12),Household & Cleaning,12,840.00,5
+Dishwashing Liquid 500 mL (case of 12),Household & Cleaning,6,600.00,5
+Toilet Tissue (pack of 48 rolls),Household & Cleaning,27,980.00,5
+Bleach 1 L (case of 12),Household & Cleaning,2,520.00,6
+Evaporated Milk 410 g (case of 48),Dairy & Frozen,13,2150.00,4
+Hotdog Jumbo 1 kg (carton of 10),Dairy & Frozen,5,1450.00,3
+Fresh Eggs Medium (crate of 10 trays),Dairy & Frozen,10,2250.00,2
+Frozen Chicken Nuggets 1 kg (carton of 10),Dairy & Frozen,27,1700.00,4
+Notebook 80 leaves (pack of 12),School & Office,15,540.00,6
+Ballpen Blue (box of 50),School & Office,22,250.00,6
+Bond Paper A4 (box of 5 reams),School & Office,8,1100.00,6
+Paracetamol 500 mg (box of 100),Health,4,380.00,7
+Alcohol 70% 500 mL (case of 12),Health,2,780.00,5
+Vitamin C 500 mg (bottle of 100),Health,4,460.00,7

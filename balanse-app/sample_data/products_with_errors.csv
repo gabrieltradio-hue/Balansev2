@@ -1,0 +1,7 @@
+product_name,category,current_stock,unit_cost,lead_time_days
+Sample Good Row 1 L,Beverages,24,300.00,4
+Sample Negative Stock 1 L,Beverages,-12,300.00,4
+,Beverages,24,300.00,4
+Sample Text In Cost 1 L,Beverages,24,three hundred,4
+Sample Missing Lead Time 1 L,Beverages,24,300.00,
+Sample Good Row 1 L,Beverages,99,300.00,4

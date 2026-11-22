@@ -1,0 +1,33 @@
+product_name,record_date,stock_quantity
+Sample Cola 1.5 L (case of 12),2026-10-14,122
+Sample Cola 1.5 L (case of 12),2026-10-21,186
+Sample Cola 1.5 L (case of 12),2026-10-28,130
+Sample Cola 1.5 L (case of 12),2026-11-04,74
+Sample Bottled Water 500 mL (case of 24),2026-10-14,120
+Sample Bottled Water 500 mL (case of 24),2026-10-21,200
+Sample Bottled Water 500 mL (case of 24),2026-10-28,130
+Sample Bottled Water 500 mL (case of 24),2026-11-04,60
+Sample Orange Juice 1 L (case of 12),2026-10-14,108
+Sample Orange Juice 1 L (case of 12),2026-10-21,66
+Sample Orange Juice 1 L (case of 12),2026-10-28,114
+Sample Orange Juice 1 L (case of 12),2026-11-04,72
+Sample Iced Tea 500 mL (case of 24),2026-10-14,100
+Sample Iced Tea 500 mL (case of 24),2026-10-21,65
+Sample Iced Tea 500 mL (case of 24),2026-10-28,105
+Sample Iced Tea 500 mL (case of 24),2026-11-04,70
+Sample Soda Water 330 mL (case of 24),2026-10-14,84
+Sample Soda Water 330 mL (case of 24),2026-10-21,56
+Sample Soda Water 330 mL (case of 24),2026-10-28,88
+Sample Soda Water 330 mL (case of 24),2026-11-04,60
+Sample Energy Drink 250 mL (case of 24),2026-10-14,130
+Sample Energy Drink 250 mL (case of 24),2026-10-21,210
+Sample Energy Drink 250 mL (case of 24),2026-10-28,140
+Sample Energy Drink 250 mL (case of 24),2026-11-04,220
+Sample Chocolate Milk 1 L (case of 12),2026-10-14,155
+Sample Chocolate Milk 1 L (case of 12),2026-10-21,120
+Sample Chocolate Milk 1 L (case of 12),2026-10-28,220
+Sample Chocolate Milk 1 L (case of 12),2026-11-04,185
+Sample Lemon Soda 1.5 L (case of 12),2026-10-14,264
+Sample Lemon Soda 1.5 L (case of 12),2026-10-21,243
+Sample Lemon Soda 1.5 L (case of 12),2026-10-28,222
+Sample Lemon Soda 1.5 L (case of 12),2026-11-04,201

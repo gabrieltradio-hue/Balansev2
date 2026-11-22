@@ -1,0 +1,767 @@
+product_name,sale_date,quantity_sold
+Jasmine Rice 25 kg (sack),2026-10-19,2
+Jasmine Rice 25 kg (sack),2026-10-20,2
+Jasmine Rice 25 kg (sack),2026-10-21,1
+Jasmine Rice 25 kg (sack),2026-10-22,1
+Jasmine Rice 25 kg (sack),2026-10-23,1
+Jasmine Rice 25 kg (sack),2026-10-24,2
+Jasmine Rice 25 kg (sack),2026-10-25,1
+Jasmine Rice 25 kg (sack),2026-10-26,2
+Jasmine Rice 25 kg (sack),2026-10-27,4
+Jasmine Rice 25 kg (sack),2026-10-28,1
+Jasmine Rice 25 kg (sack),2026-10-29,2
+Jasmine Rice 25 kg (sack),2026-10-30,2
+Jasmine Rice 25 kg (sack),2026-10-31,5
+Jasmine Rice 25 kg (sack),2026-11-01,2
+Jasmine Rice 25 kg (sack),2026-11-02,3
+Jasmine Rice 25 kg (sack),2026-11-03,2
+Jasmine Rice 25 kg (sack),2026-11-04,2
+Jasmine Rice 25 kg (sack),2026-11-05,2
+Jasmine Rice 25 kg (sack),2026-11-06,4
+Jasmine Rice 25 kg (sack),2026-11-07,3
+Jasmine Rice 25 kg (sack),2026-11-08,2
+Jasmine Rice 25 kg (sack),2026-11-10,1
+Jasmine Rice 25 kg (sack),2026-11-11,2
+Jasmine Rice 25 kg (sack),2026-11-12,3
+Jasmine Rice 25 kg (sack),2026-11-13,3
+Jasmine Rice 25 kg (sack),2026-11-14,3
+Jasmine Rice 25 kg (sack),2026-11-15,4
+Jasmine Rice 25 kg (sack),2026-11-16,3
+Jasmine Rice 25 kg (sack),2026-11-17,1
+Cooking Oil 1 L (case of 12),2026-10-19,1
+Cooking Oil 1 L (case of 12),2026-10-20,1
+Cooking Oil 1 L (case of 12),2026-10-21,1
+Cooking Oil 1 L (case of 12),2026-10-23,1
+Cooking Oil 1 L (case of 12),2026-10-24,2
+Cooking Oil 1 L (case of 12),2026-10-25,2
+Cooking Oil 1 L (case of 12),2026-10-26,1
+Cooking Oil 1 L (case of 12),2026-10-27,1
+Cooking Oil 1 L (case of 12),2026-10-28,1
+Cooking Oil 1 L (case of 12),2026-10-31,2
+Cooking Oil 1 L (case of 12),2026-11-01,1
+Cooking Oil 1 L (case of 12),2026-11-02,2
+Cooking Oil 1 L (case of 12),2026-11-03,2
+Cooking Oil 1 L (case of 12),2026-11-04,1
+Cooking Oil 1 L (case of 12),2026-11-05,1
+Cooking Oil 1 L (case of 12),2026-11-06,2
+Cooking Oil 1 L (case of 12),2026-11-07,2
+Cooking Oil 1 L (case of 12),2026-11-08,2
+Cooking Oil 1 L (case of 12),2026-11-10,1
+Cooking Oil 1 L (case of 12),2026-11-12,1
+Cooking Oil 1 L (case of 12),2026-11-13,2
+Cooking Oil 1 L (case of 12),2026-11-14,1
+Cooking Oil 1 L (case of 12),2026-11-15,2
+Iodized Salt 500 g (pack of 20),2026-10-19,1
+Iodized Salt 500 g (pack of 20),2026-10-22,1
+Iodized Salt 500 g (pack of 20),2026-10-24,1
+Iodized Salt 500 g (pack of 20),2026-10-25,1
+Iodized Salt 500 g (pack of 20),2026-10-26,1
+Iodized Salt 500 g (pack of 20),2026-10-28,1
+Iodized Salt 500 g (pack of 20),2026-10-29,1
+Iodized Salt 500 g (pack of 20),2026-10-30,1
+Iodized Salt 500 g (pack of 20),2026-11-02,1
+Iodized Salt 500 g (pack of 20),2026-11-03,1
+Iodized Salt 500 g (pack of 20),2026-11-04,1
+Iodized Salt 500 g (pack of 20),2026-11-05,1
+Iodized Salt 500 g (pack of 20),2026-11-06,1
+Iodized Salt 500 g (pack of 20),2026-11-07,1
+Iodized Salt 500 g (pack of 20),2026-11-08,1
+Iodized Salt 500 g (pack of 20),2026-11-09,1
+Iodized Salt 500 g (pack of 20),2026-11-14,1
+Iodized Salt 500 g (pack of 20),2026-11-16,1
+White Sugar 1 kg (pack of 10),2026-10-19,1
+White Sugar 1 kg (pack of 10),2026-10-20,1
+White Sugar 1 kg (pack of 10),2026-10-21,1
+White Sugar 1 kg (pack of 10),2026-10-22,2
+White Sugar 1 kg (pack of 10),2026-10-23,2
+White Sugar 1 kg (pack of 10),2026-10-24,2
+White Sugar 1 kg (pack of 10),2026-10-25,2
+White Sugar 1 kg (pack of 10),2026-10-26,1
+White Sugar 1 kg (pack of 10),2026-10-27,1
+White Sugar 1 kg (pack of 10),2026-10-28,2
+White Sugar 1 kg (pack of 10),2026-10-29,1
+White Sugar 1 kg (pack of 10),2026-10-30,2
+White Sugar 1 kg (pack of 10),2026-10-31,1
+White Sugar 1 kg (pack of 10),2026-11-01,2
+White Sugar 1 kg (pack of 10),2026-11-02,1
+White Sugar 1 kg (pack of 10),2026-11-03,1
+White Sugar 1 kg (pack of 10),2026-11-04,1
+White Sugar 1 kg (pack of 10),2026-11-05,2
+White Sugar 1 kg (pack of 10),2026-11-06,1
+White Sugar 1 kg (pack of 10),2026-11-07,2
+White Sugar 1 kg (pack of 10),2026-11-08,1
+White Sugar 1 kg (pack of 10),2026-11-09,2
+White Sugar 1 kg (pack of 10),2026-11-11,1
+White Sugar 1 kg (pack of 10),2026-11-12,1
+White Sugar 1 kg (pack of 10),2026-11-13,1
+White Sugar 1 kg (pack of 10),2026-11-14,3
+White Sugar 1 kg (pack of 10),2026-11-15,2
+White Sugar 1 kg (pack of 10),2026-11-16,1
+White Sugar 1 kg (pack of 10),2026-11-17,1
+Instant Noodles (case of 48),2026-10-19,4
+Instant Noodles (case of 48),2026-10-20,4
+Instant Noodles (case of 48),2026-10-21,2
+Instant Noodles (case of 48),2026-10-22,5
+Instant Noodles (case of 48),2026-10-23,2
+Instant Noodles (case of 48),2026-10-24,7
+Instant Noodles (case of 48),2026-10-25,4
+Instant Noodles (case of 48),2026-10-26,4
+Instant Noodles (case of 48),2026-10-27,4
+Instant Noodles (case of 48),2026-10-28,2
+Instant Noodles (case of 48),2026-10-29,3
+Instant Noodles (case of 48),2026-10-30,4
+Instant Noodles (case of 48),2026-10-31,3
+Instant Noodles (case of 48),2026-11-01,5
+Instant Noodles (case of 48),2026-11-02,2
+Instant Noodles (case of 48),2026-11-03,3
+Instant Noodles (case of 48),2026-11-04,4
+Instant Noodles (case of 48),2026-11-05,2
+Instant Noodles (case of 48),2026-11-06,2
+Instant Noodles (case of 48),2026-11-07,2
+Instant Noodles (case of 48),2026-11-08,5
+Instant Noodles (case of 48),2026-11-09,3
+Instant Noodles (case of 48),2026-11-10,6
+Instant Noodles (case of 48),2026-11-11,2
+Instant Noodles (case of 48),2026-11-12,2
+Instant Noodles (case of 48),2026-11-13,2
+Instant Noodles (case of 48),2026-11-14,6
+Instant Noodles (case of 48),2026-11-15,4
+Instant Noodles (case of 48),2026-11-16,5
+Instant Noodles (case of 48),2026-11-17,2
+Canned Sardines 155 g (case of 50),2026-10-19,2
+Canned Sardines 155 g (case of 50),2026-10-20,1
+Canned Sardines 155 g (case of 50),2026-10-21,1
+Canned Sardines 155 g (case of 50),2026-10-22,2
+Canned Sardines 155 g (case of 50),2026-10-23,1
+Canned Sardines 155 g (case of 50),2026-10-24,3
+Canned Sardines 155 g (case of 50),2026-10-25,3
+Canned Sardines 155 g (case of 50),2026-10-26,1
+Canned Sardines 155 g (case of 50),2026-10-27,2
+Canned Sardines 155 g (case of 50),2026-10-28,1
+Canned Sardines 155 g (case of 50),2026-10-29,1
+Canned Sardines 155 g (case of 50),2026-10-30,1
+Canned Sardines 155 g (case of 50),2026-10-31,2
+Canned Sardines 155 g (case of 50),2026-11-01,2
+Canned Sardines 155 g (case of 50),2026-11-02,2
+Canned Sardines 155 g (case of 50),2026-11-03,1
+Canned Sardines 155 g (case of 50),2026-11-04,2
+Canned Sardines 155 g (case of 50),2026-11-05,2
+Canned Sardines 155 g (case of 50),2026-11-06,2
+Canned Sardines 155 g (case of 50),2026-11-08,2
+Canned Sardines 155 g (case of 50),2026-11-09,2
+Canned Sardines 155 g (case of 50),2026-11-10,1
+Canned Sardines 155 g (case of 50),2026-11-11,2
+Canned Sardines 155 g (case of 50),2026-11-12,2
+Canned Sardines 155 g (case of 50),2026-11-13,3
+Canned Sardines 155 g (case of 50),2026-11-14,2
+Canned Sardines 155 g (case of 50),2026-11-15,2
+Canned Sardines 155 g (case of 50),2026-11-16,4
+Canned Sardines 155 g (case of 50),2026-11-17,2
+Soy Sauce 1 L (case of 12),2026-10-20,1
+Soy Sauce 1 L (case of 12),2026-10-22,1
+Soy Sauce 1 L (case of 12),2026-10-23,1
+Soy Sauce 1 L (case of 12),2026-10-24,1
+Soy Sauce 1 L (case of 12),2026-10-25,1
+Soy Sauce 1 L (case of 12),2026-10-26,1
+Soy Sauce 1 L (case of 12),2026-10-27,1
+Soy Sauce 1 L (case of 12),2026-10-28,1
+Soy Sauce 1 L (case of 12),2026-10-29,1
+Soy Sauce 1 L (case of 12),2026-10-30,1
+Soy Sauce 1 L (case of 12),2026-11-02,1
+Soy Sauce 1 L (case of 12),2026-11-06,1
+Soy Sauce 1 L (case of 12),2026-11-07,1
+Soy Sauce 1 L (case of 12),2026-11-08,1
+Soy Sauce 1 L (case of 12),2026-11-09,1
+Soy Sauce 1 L (case of 12),2026-11-10,1
+Soy Sauce 1 L (case of 12),2026-11-11,1
+Soy Sauce 1 L (case of 12),2026-11-13,1
+Soy Sauce 1 L (case of 12),2026-11-14,1
+Soy Sauce 1 L (case of 12),2026-11-15,1
+Soy Sauce 1 L (case of 12),2026-11-16,1
+3-in-1 Coffee Sachets (box of 30),2026-10-19,3
+3-in-1 Coffee Sachets (box of 30),2026-10-20,2
+3-in-1 Coffee Sachets (box of 30),2026-10-21,2
+3-in-1 Coffee Sachets (box of 30),2026-10-22,4
+3-in-1 Coffee Sachets (box of 30),2026-10-23,3
+3-in-1 Coffee Sachets (box of 30),2026-10-24,3
+3-in-1 Coffee Sachets (box of 30),2026-10-25,5
+3-in-1 Coffee Sachets (box of 30),2026-10-26,1
+3-in-1 Coffee Sachets (box of 30),2026-10-27,3
+3-in-1 Coffee Sachets (box of 30),2026-10-28,2
+3-in-1 Coffee Sachets (box of 30),2026-10-29,2
+3-in-1 Coffee Sachets (box of 30),2026-10-30,2
+3-in-1 Coffee Sachets (box of 30),2026-11-01,4
+3-in-1 Coffee Sachets (box of 30),2026-11-02,1
+3-in-1 Coffee Sachets (box of 30),2026-11-03,3
+3-in-1 Coffee Sachets (box of 30),2026-11-04,4
+3-in-1 Coffee Sachets (box of 30),2026-11-05,2
+3-in-1 Coffee Sachets (box of 30),2026-11-06,5
+3-in-1 Coffee Sachets (box of 30),2026-11-07,3
+3-in-1 Coffee Sachets (box of 30),2026-11-08,3
+3-in-1 Coffee Sachets (box of 30),2026-11-09,2
+3-in-1 Coffee Sachets (box of 30),2026-11-10,3
+3-in-1 Coffee Sachets (box of 30),2026-11-11,1
+3-in-1 Coffee Sachets (box of 30),2026-11-12,3
+3-in-1 Coffee Sachets (box of 30),2026-11-13,1
+3-in-1 Coffee Sachets (box of 30),2026-11-14,2
+3-in-1 Coffee Sachets (box of 30),2026-11-15,4
+3-in-1 Coffee Sachets (box of 30),2026-11-16,2
+3-in-1 Coffee Sachets (box of 30),2026-11-17,3
+Bottled Water 500 mL (case of 24),2026-10-19,8
+Bottled Water 500 mL (case of 24),2026-10-20,6
+Bottled Water 500 mL (case of 24),2026-10-21,5
+Bottled Water 500 mL (case of 24),2026-10-22,3
+Bottled Water 500 mL (case of 24),2026-10-23,9
+Bottled Water 500 mL (case of 24),2026-10-24,8
+Bottled Water 500 mL (case of 24),2026-10-25,3
+Bottled Water 500 mL (case of 24),2026-10-26,3
+Bottled Water 500 mL (case of 24),2026-10-27,8
+Bottled Water 500 mL (case of 24),2026-10-28,1
+Bottled Water 500 mL (case of 24),2026-10-29,8
+Bottled Water 500 mL (case of 24),2026-10-30,8
+Bottled Water 500 mL (case of 24),2026-10-31,12
+Bottled Water 500 mL (case of 24),2026-11-01,7
+Bottled Water 500 mL (case of 24),2026-11-02,3
+Bottled Water 500 mL (case of 24),2026-11-04,7
+Bottled Water 500 mL (case of 24),2026-11-05,6
+Bottled Water 500 mL (case of 24),2026-11-06,2
+Bottled Water 500 mL (case of 24),2026-11-07,5
+Bottled Water 500 mL (case of 24),2026-11-08,5
+Bottled Water 500 mL (case of 24),2026-11-09,4
+Bottled Water 500 mL (case of 24),2026-11-10,4
+Bottled Water 500 mL (case of 24),2026-11-11,6
+Bottled Water 500 mL (case of 24),2026-11-12,6
+Bottled Water 500 mL (case of 24),2026-11-13,10
+Bottled Water 500 mL (case of 24),2026-11-14,11
+Bottled Water 500 mL (case of 24),2026-11-15,14
+Bottled Water 500 mL (case of 24),2026-11-16,5
+Bottled Water 500 mL (case of 24),2026-11-17,3
+Cola 1.5 L (case of 12),2026-10-19,3
+Cola 1.5 L (case of 12),2026-10-20,1
+Cola 1.5 L (case of 12),2026-10-21,5
+Cola 1.5 L (case of 12),2026-10-22,6
+Cola 1.5 L (case of 12),2026-10-23,4
+Cola 1.5 L (case of 12),2026-10-24,6
+Cola 1.5 L (case of 12),2026-10-25,2
+Cola 1.5 L (case of 12),2026-10-26,1
+Cola 1.5 L (case of 12),2026-10-27,5
+Cola 1.5 L (case of 12),2026-10-28,2
+Cola 1.5 L (case of 12),2026-10-29,4
+Cola 1.5 L (case of 12),2026-10-30,3
+Cola 1.5 L (case of 12),2026-10-31,5
+Cola 1.5 L (case of 12),2026-11-01,1
+Cola 1.5 L (case of 12),2026-11-02,2
+Cola 1.5 L (case of 12),2026-11-03,2
+Cola 1.5 L (case of 12),2026-11-04,6
+Cola 1.5 L (case of 12),2026-11-05,4
+Cola 1.5 L (case of 12),2026-11-06,5
+Cola 1.5 L (case of 12),2026-11-07,5
+Cola 1.5 L (case of 12),2026-11-08,6
+Cola 1.5 L (case of 12),2026-11-09,3
+Cola 1.5 L (case of 12),2026-11-10,5
+Cola 1.5 L (case of 12),2026-11-11,5
+Cola 1.5 L (case of 12),2026-11-12,2
+Cola 1.5 L (case of 12),2026-11-13,5
+Cola 1.5 L (case of 12),2026-11-14,6
+Cola 1.5 L (case of 12),2026-11-15,8
+Cola 1.5 L (case of 12),2026-11-16,4
+Cola 1.5 L (case of 12),2026-11-17,4
+Orange Juice 1 L (case of 12),2026-10-19,2
+Orange Juice 1 L (case of 12),2026-10-20,3
+Orange Juice 1 L (case of 12),2026-10-21,1
+Orange Juice 1 L (case of 12),2026-10-22,2
+Orange Juice 1 L (case of 12),2026-10-23,3
+Orange Juice 1 L (case of 12),2026-10-24,2
+Orange Juice 1 L (case of 12),2026-10-25,2
+Orange Juice 1 L (case of 12),2026-10-27,2
+Orange Juice 1 L (case of 12),2026-10-28,2
+Orange Juice 1 L (case of 12),2026-10-29,3
+Orange Juice 1 L (case of 12),2026-10-30,1
+Orange Juice 1 L (case of 12),2026-10-31,3
+Orange Juice 1 L (case of 12),2026-11-01,2
+Orange Juice 1 L (case of 12),2026-11-02,2
+Orange Juice 1 L (case of 12),2026-11-03,2
+Orange Juice 1 L (case of 12),2026-11-04,2
+Orange Juice 1 L (case of 12),2026-11-05,1
+Orange Juice 1 L (case of 12),2026-11-06,2
+Orange Juice 1 L (case of 12),2026-11-07,2
+Orange Juice 1 L (case of 12),2026-11-08,3
+Orange Juice 1 L (case of 12),2026-11-09,2
+Orange Juice 1 L (case of 12),2026-11-10,1
+Orange Juice 1 L (case of 12),2026-11-11,1
+Orange Juice 1 L (case of 12),2026-11-12,2
+Orange Juice 1 L (case of 12),2026-11-13,2
+Orange Juice 1 L (case of 12),2026-11-14,3
+Orange Juice 1 L (case of 12),2026-11-15,2
+Orange Juice 1 L (case of 12),2026-11-16,3
+Orange Juice 1 L (case of 12),2026-11-17,2
+Iced Tea 500 mL (case of 24),2026-10-19,2
+Iced Tea 500 mL (case of 24),2026-10-20,3
+Iced Tea 500 mL (case of 24),2026-10-21,2
+Iced Tea 500 mL (case of 24),2026-10-22,4
+Iced Tea 500 mL (case of 24),2026-10-23,3
+Iced Tea 500 mL (case of 24),2026-10-24,3
+Iced Tea 500 mL (case of 24),2026-10-25,5
+Iced Tea 500 mL (case of 24),2026-10-26,4
+Iced Tea 500 mL (case of 24),2026-10-27,2
+Iced Tea 500 mL (case of 24),2026-10-29,1
+Iced Tea 500 mL (case of 24),2026-10-30,4
+Iced Tea 500 mL (case of 24),2026-10-31,3
+Iced Tea 500 mL (case of 24),2026-11-01,3
+Iced Tea 500 mL (case of 24),2026-11-02,2
+Iced Tea 500 mL (case of 24),2026-11-03,1
+Iced Tea 500 mL (case of 24),2026-11-04,1
+Iced Tea 500 mL (case of 24),2026-11-05,3
+Iced Tea 500 mL (case of 24),2026-11-06,2
+Iced Tea 500 mL (case of 24),2026-11-07,2
+Iced Tea 500 mL (case of 24),2026-11-08,4
+Iced Tea 500 mL (case of 24),2026-11-09,3
+Iced Tea 500 mL (case of 24),2026-11-10,3
+Iced Tea 500 mL (case of 24),2026-11-11,3
+Iced Tea 500 mL (case of 24),2026-11-12,1
+Iced Tea 500 mL (case of 24),2026-11-13,3
+Iced Tea 500 mL (case of 24),2026-11-14,1
+Iced Tea 500 mL (case of 24),2026-11-15,4
+Iced Tea 500 mL (case of 24),2026-11-16,1
+Iced Tea 500 mL (case of 24),2026-11-17,2
+Potato Chips 60 g (case of 24),2026-10-19,3
+Potato Chips 60 g (case of 24),2026-10-20,2
+Potato Chips 60 g (case of 24),2026-10-21,4
+Potato Chips 60 g (case of 24),2026-10-22,2
+Potato Chips 60 g (case of 24),2026-10-23,1
+Potato Chips 60 g (case of 24),2026-10-24,4
+Potato Chips 60 g (case of 24),2026-10-25,3
+Potato Chips 60 g (case of 24),2026-10-26,2
+Potato Chips 60 g (case of 24),2026-10-27,1
+Potato Chips 60 g (case of 24),2026-10-28,3
+Potato Chips 60 g (case of 24),2026-10-29,6
+Potato Chips 60 g (case of 24),2026-10-30,3
+Potato Chips 60 g (case of 24),2026-10-31,4
+Potato Chips 60 g (case of 24),2026-11-01,6
+Potato Chips 60 g (case of 24),2026-11-02,2
+Potato Chips 60 g (case of 24),2026-11-03,4
+Potato Chips 60 g (case of 24),2026-11-04,3
+Potato Chips 60 g (case of 24),2026-11-05,3
+Potato Chips 60 g (case of 24),2026-11-06,1
+Potato Chips 60 g (case of 24),2026-11-07,3
+Potato Chips 60 g (case of 24),2026-11-08,2
+Potato Chips 60 g (case of 24),2026-11-09,3
+Potato Chips 60 g (case of 24),2026-11-10,3
+Potato Chips 60 g (case of 24),2026-11-11,1
+Potato Chips 60 g (case of 24),2026-11-12,2
+Potato Chips 60 g (case of 24),2026-11-13,2
+Potato Chips 60 g (case of 24),2026-11-14,3
+Potato Chips 60 g (case of 24),2026-11-15,3
+Potato Chips 60 g (case of 24),2026-11-16,2
+Potato Chips 60 g (case of 24),2026-11-17,3
+Assorted Biscuits (case of 36),2026-10-19,2
+Assorted Biscuits (case of 36),2026-10-20,2
+Assorted Biscuits (case of 36),2026-10-21,1
+Assorted Biscuits (case of 36),2026-10-22,1
+Assorted Biscuits (case of 36),2026-10-23,3
+Assorted Biscuits (case of 36),2026-10-24,3
+Assorted Biscuits (case of 36),2026-10-25,2
+Assorted Biscuits (case of 36),2026-10-26,5
+Assorted Biscuits (case of 36),2026-10-27,1
+Assorted Biscuits (case of 36),2026-10-28,1
+Assorted Biscuits (case of 36),2026-10-29,3
+Assorted Biscuits (case of 36),2026-10-30,2
+Assorted Biscuits (case of 36),2026-10-31,2
+Assorted Biscuits (case of 36),2026-11-01,2
+Assorted Biscuits (case of 36),2026-11-02,1
+Assorted Biscuits (case of 36),2026-11-03,1
+Assorted Biscuits (case of 36),2026-11-04,2
+Assorted Biscuits (case of 36),2026-11-05,3
+Assorted Biscuits (case of 36),2026-11-06,2
+Assorted Biscuits (case of 36),2026-11-07,3
+Assorted Biscuits (case of 36),2026-11-08,3
+Assorted Biscuits (case of 36),2026-11-10,2
+Assorted Biscuits (case of 36),2026-11-11,1
+Assorted Biscuits (case of 36),2026-11-12,2
+Assorted Biscuits (case of 36),2026-11-13,1
+Assorted Biscuits (case of 36),2026-11-14,1
+Assorted Biscuits (case of 36),2026-11-15,2
+Assorted Biscuits (case of 36),2026-11-16,4
+Assorted Biscuits (case of 36),2026-11-17,2
+Roasted Peanuts 100 g (pack of 30),2026-10-19,2
+Roasted Peanuts 100 g (pack of 30),2026-10-20,1
+Roasted Peanuts 100 g (pack of 30),2026-10-21,1
+Roasted Peanuts 100 g (pack of 30),2026-10-22,1
+Roasted Peanuts 100 g (pack of 30),2026-10-23,1
+Roasted Peanuts 100 g (pack of 30),2026-10-24,1
+Roasted Peanuts 100 g (pack of 30),2026-10-25,1
+Roasted Peanuts 100 g (pack of 30),2026-10-26,1
+Roasted Peanuts 100 g (pack of 30),2026-10-27,1
+Roasted Peanuts 100 g (pack of 30),2026-10-28,1
+Roasted Peanuts 100 g (pack of 30),2026-10-29,1
+Roasted Peanuts 100 g (pack of 30),2026-10-30,1
+Roasted Peanuts 100 g (pack of 30),2026-10-31,1
+Roasted Peanuts 100 g (pack of 30),2026-11-01,2
+Roasted Peanuts 100 g (pack of 30),2026-11-02,1
+Roasted Peanuts 100 g (pack of 30),2026-11-03,1
+Roasted Peanuts 100 g (pack of 30),2026-11-04,1
+Roasted Peanuts 100 g (pack of 30),2026-11-05,1
+Roasted Peanuts 100 g (pack of 30),2026-11-06,1
+Roasted Peanuts 100 g (pack of 30),2026-11-07,1
+Roasted Peanuts 100 g (pack of 30),2026-11-08,2
+Roasted Peanuts 100 g (pack of 30),2026-11-09,1
+Roasted Peanuts 100 g (pack of 30),2026-11-10,1
+Roasted Peanuts 100 g (pack of 30),2026-11-11,1
+Roasted Peanuts 100 g (pack of 30),2026-11-13,1
+Roasted Peanuts 100 g (pack of 30),2026-11-16,1
+Roasted Peanuts 100 g (pack of 30),2026-11-17,1
+Shampoo Sachets (box of 144),2026-10-19,1
+Shampoo Sachets (box of 144),2026-10-20,1
+Shampoo Sachets (box of 144),2026-10-21,1
+Shampoo Sachets (box of 144),2026-10-22,1
+Shampoo Sachets (box of 144),2026-10-24,1
+Shampoo Sachets (box of 144),2026-10-25,1
+Shampoo Sachets (box of 144),2026-10-26,1
+Shampoo Sachets (box of 144),2026-10-28,1
+Shampoo Sachets (box of 144),2026-10-29,1
+Shampoo Sachets (box of 144),2026-10-31,1
+Shampoo Sachets (box of 144),2026-11-01,1
+Shampoo Sachets (box of 144),2026-11-02,1
+Shampoo Sachets (box of 144),2026-11-05,1
+Shampoo Sachets (box of 144),2026-11-06,1
+Shampoo Sachets (box of 144),2026-11-07,2
+Shampoo Sachets (box of 144),2026-11-08,1
+Shampoo Sachets (box of 144),2026-11-10,1
+Shampoo Sachets (box of 144),2026-11-11,1
+Shampoo Sachets (box of 144),2026-11-12,1
+Shampoo Sachets (box of 144),2026-11-13,1
+Shampoo Sachets (box of 144),2026-11-15,1
+Shampoo Sachets (box of 144),2026-11-16,1
+Shampoo Sachets (box of 144),2026-11-17,1
+Bath Soap 90 g (box of 72),2026-10-19,1
+Bath Soap 90 g (box of 72),2026-10-20,1
+Bath Soap 90 g (box of 72),2026-10-21,1
+Bath Soap 90 g (box of 72),2026-10-24,1
+Bath Soap 90 g (box of 72),2026-10-25,1
+Bath Soap 90 g (box of 72),2026-10-26,1
+Bath Soap 90 g (box of 72),2026-10-28,2
+Bath Soap 90 g (box of 72),2026-11-01,1
+Bath Soap 90 g (box of 72),2026-11-02,1
+Bath Soap 90 g (box of 72),2026-11-05,1
+Bath Soap 90 g (box of 72),2026-11-06,1
+Bath Soap 90 g (box of 72),2026-11-07,1
+Bath Soap 90 g (box of 72),2026-11-08,1
+Bath Soap 90 g (box of 72),2026-11-09,1
+Bath Soap 90 g (box of 72),2026-11-11,1
+Bath Soap 90 g (box of 72),2026-11-14,1
+Bath Soap 90 g (box of 72),2026-11-15,1
+Toothpaste 50 g (box of 48),2026-10-20,1
+Toothpaste 50 g (box of 48),2026-10-22,1
+Toothpaste 50 g (box of 48),2026-10-23,1
+Toothpaste 50 g (box of 48),2026-10-24,1
+Toothpaste 50 g (box of 48),2026-10-25,1
+Toothpaste 50 g (box of 48),2026-10-28,1
+Toothpaste 50 g (box of 48),2026-11-02,1
+Toothpaste 50 g (box of 48),2026-11-04,1
+Toothpaste 50 g (box of 48),2026-11-06,1
+Toothpaste 50 g (box of 48),2026-11-07,1
+Toothpaste 50 g (box of 48),2026-11-08,1
+Toothpaste 50 g (box of 48),2026-11-13,2
+Toothpaste 50 g (box of 48),2026-11-14,1
+Toothpaste 50 g (box of 48),2026-11-15,1
+Laundry Powder 1 kg (case of 12),2026-10-19,2
+Laundry Powder 1 kg (case of 12),2026-10-20,1
+Laundry Powder 1 kg (case of 12),2026-10-21,1
+Laundry Powder 1 kg (case of 12),2026-10-22,1
+Laundry Powder 1 kg (case of 12),2026-10-23,2
+Laundry Powder 1 kg (case of 12),2026-10-24,2
+Laundry Powder 1 kg (case of 12),2026-10-26,1
+Laundry Powder 1 kg (case of 12),2026-10-27,1
+Laundry Powder 1 kg (case of 12),2026-10-28,1
+Laundry Powder 1 kg (case of 12),2026-10-29,2
+Laundry Powder 1 kg (case of 12),2026-10-30,2
+Laundry Powder 1 kg (case of 12),2026-10-31,2
+Laundry Powder 1 kg (case of 12),2026-11-01,1
+Laundry Powder 1 kg (case of 12),2026-11-02,1
+Laundry Powder 1 kg (case of 12),2026-11-03,1
+Laundry Powder 1 kg (case of 12),2026-11-04,1
+Laundry Powder 1 kg (case of 12),2026-11-05,2
+Laundry Powder 1 kg (case of 12),2026-11-06,3
+Laundry Powder 1 kg (case of 12),2026-11-07,2
+Laundry Powder 1 kg (case of 12),2026-11-08,2
+Laundry Powder 1 kg (case of 12),2026-11-09,1
+Laundry Powder 1 kg (case of 12),2026-11-10,1
+Laundry Powder 1 kg (case of 12),2026-11-11,1
+Laundry Powder 1 kg (case of 12),2026-11-13,1
+Laundry Powder 1 kg (case of 12),2026-11-14,2
+Laundry Powder 1 kg (case of 12),2026-11-15,1
+Laundry Powder 1 kg (case of 12),2026-11-17,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-20,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-21,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-22,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-23,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-24,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-25,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-26,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-27,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-28,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-30,1
+Dishwashing Liquid 500 mL (case of 12),2026-10-31,2
+Dishwashing Liquid 500 mL (case of 12),2026-11-01,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-02,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-03,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-04,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-05,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-06,2
+Dishwashing Liquid 500 mL (case of 12),2026-11-07,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-08,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-09,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-11,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-12,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-15,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-16,1
+Dishwashing Liquid 500 mL (case of 12),2026-11-17,1
+Toilet Tissue (pack of 48 rolls),2026-10-20,1
+Toilet Tissue (pack of 48 rolls),2026-10-21,2
+Toilet Tissue (pack of 48 rolls),2026-10-22,2
+Toilet Tissue (pack of 48 rolls),2026-10-23,1
+Toilet Tissue (pack of 48 rolls),2026-10-24,3
+Toilet Tissue (pack of 48 rolls),2026-10-25,2
+Toilet Tissue (pack of 48 rolls),2026-10-26,1
+Toilet Tissue (pack of 48 rolls),2026-10-27,1
+Toilet Tissue (pack of 48 rolls),2026-10-28,3
+Toilet Tissue (pack of 48 rolls),2026-10-29,2
+Toilet Tissue (pack of 48 rolls),2026-10-30,2
+Toilet Tissue (pack of 48 rolls),2026-10-31,1
+Toilet Tissue (pack of 48 rolls),2026-11-01,2
+Toilet Tissue (pack of 48 rolls),2026-11-02,1
+Toilet Tissue (pack of 48 rolls),2026-11-03,1
+Toilet Tissue (pack of 48 rolls),2026-11-04,1
+Toilet Tissue (pack of 48 rolls),2026-11-05,2
+Toilet Tissue (pack of 48 rolls),2026-11-06,3
+Toilet Tissue (pack of 48 rolls),2026-11-07,2
+Toilet Tissue (pack of 48 rolls),2026-11-08,2
+Toilet Tissue (pack of 48 rolls),2026-11-09,1
+Toilet Tissue (pack of 48 rolls),2026-11-10,1
+Toilet Tissue (pack of 48 rolls),2026-11-11,2
+Toilet Tissue (pack of 48 rolls),2026-11-12,1
+Toilet Tissue (pack of 48 rolls),2026-11-13,2
+Toilet Tissue (pack of 48 rolls),2026-11-14,2
+Toilet Tissue (pack of 48 rolls),2026-11-15,1
+Toilet Tissue (pack of 48 rolls),2026-11-16,1
+Toilet Tissue (pack of 48 rolls),2026-11-17,2
+Bleach 1 L (case of 12),2026-10-19,2
+Bleach 1 L (case of 12),2026-10-21,1
+Bleach 1 L (case of 12),2026-10-27,1
+Bleach 1 L (case of 12),2026-10-28,1
+Bleach 1 L (case of 12),2026-10-29,1
+Bleach 1 L (case of 12),2026-10-30,1
+Bleach 1 L (case of 12),2026-11-04,1
+Bleach 1 L (case of 12),2026-11-07,1
+Bleach 1 L (case of 12),2026-11-09,1
+Bleach 1 L (case of 12),2026-11-12,1
+Bleach 1 L (case of 12),2026-11-15,2
+Bleach 1 L (case of 12),2026-11-16,1
+Bleach 1 L (case of 12),2026-11-17,1
+Evaporated Milk 410 g (case of 48),2026-10-19,1
+Evaporated Milk 410 g (case of 48),2026-10-20,1
+Evaporated Milk 410 g (case of 48),2026-10-21,1
+Evaporated Milk 410 g (case of 48),2026-10-23,1
+Evaporated Milk 410 g (case of 48),2026-10-25,1
+Evaporated Milk 410 g (case of 48),2026-10-26,1
+Evaporated Milk 410 g (case of 48),2026-10-27,2
+Evaporated Milk 410 g (case of 48),2026-10-28,1
+Evaporated Milk 410 g (case of 48),2026-10-30,1
+Evaporated Milk 410 g (case of 48),2026-10-31,2
+Evaporated Milk 410 g (case of 48),2026-11-01,1
+Evaporated Milk 410 g (case of 48),2026-11-02,1
+Evaporated Milk 410 g (case of 48),2026-11-03,1
+Evaporated Milk 410 g (case of 48),2026-11-04,1
+Evaporated Milk 410 g (case of 48),2026-11-05,1
+Evaporated Milk 410 g (case of 48),2026-11-06,1
+Evaporated Milk 410 g (case of 48),2026-11-07,1
+Evaporated Milk 410 g (case of 48),2026-11-08,2
+Evaporated Milk 410 g (case of 48),2026-11-09,1
+Evaporated Milk 410 g (case of 48),2026-11-10,1
+Evaporated Milk 410 g (case of 48),2026-11-11,1
+Evaporated Milk 410 g (case of 48),2026-11-12,1
+Evaporated Milk 410 g (case of 48),2026-11-13,2
+Evaporated Milk 410 g (case of 48),2026-11-14,2
+Evaporated Milk 410 g (case of 48),2026-11-15,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-19,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-20,2
+Hotdog Jumbo 1 kg (carton of 10),2026-10-21,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-23,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-24,2
+Hotdog Jumbo 1 kg (carton of 10),2026-10-25,2
+Hotdog Jumbo 1 kg (carton of 10),2026-10-26,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-27,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-28,2
+Hotdog Jumbo 1 kg (carton of 10),2026-10-29,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-30,1
+Hotdog Jumbo 1 kg (carton of 10),2026-10-31,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-01,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-02,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-03,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-04,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-06,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-07,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-09,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-10,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-12,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-13,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-14,2
+Hotdog Jumbo 1 kg (carton of 10),2026-11-15,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-16,1
+Hotdog Jumbo 1 kg (carton of 10),2026-11-17,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-19,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-20,2
+Fresh Eggs Medium (crate of 10 trays),2026-10-21,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-22,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-23,2
+Fresh Eggs Medium (crate of 10 trays),2026-10-24,3
+Fresh Eggs Medium (crate of 10 trays),2026-10-25,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-26,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-27,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-28,1
+Fresh Eggs Medium (crate of 10 trays),2026-10-29,2
+Fresh Eggs Medium (crate of 10 trays),2026-10-31,1
+Fresh Eggs Medium (crate of 10 trays),2026-11-01,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-02,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-04,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-06,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-07,3
+Fresh Eggs Medium (crate of 10 trays),2026-11-08,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-09,1
+Fresh Eggs Medium (crate of 10 trays),2026-11-11,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-12,1
+Fresh Eggs Medium (crate of 10 trays),2026-11-13,3
+Fresh Eggs Medium (crate of 10 trays),2026-11-14,3
+Fresh Eggs Medium (crate of 10 trays),2026-11-15,2
+Fresh Eggs Medium (crate of 10 trays),2026-11-16,1
+Fresh Eggs Medium (crate of 10 trays),2026-11-17,2
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-20,2
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-23,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-24,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-25,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-26,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-27,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-29,2
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-10-31,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-01,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-02,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-03,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-04,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-07,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-08,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-09,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-12,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-13,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-14,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-15,1
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-16,2
+Frozen Chicken Nuggets 1 kg (carton of 10),2026-11-17,1
+Notebook 80 leaves (pack of 12),2026-10-19,1
+Notebook 80 leaves (pack of 12),2026-10-20,1
+Notebook 80 leaves (pack of 12),2026-10-21,1
+Notebook 80 leaves (pack of 12),2026-10-22,2
+Notebook 80 leaves (pack of 12),2026-10-24,2
+Notebook 80 leaves (pack of 12),2026-10-25,1
+Notebook 80 leaves (pack of 12),2026-10-26,1
+Notebook 80 leaves (pack of 12),2026-10-27,2
+Notebook 80 leaves (pack of 12),2026-10-28,1
+Notebook 80 leaves (pack of 12),2026-10-29,1
+Notebook 80 leaves (pack of 12),2026-10-30,1
+Notebook 80 leaves (pack of 12),2026-10-31,1
+Notebook 80 leaves (pack of 12),2026-11-02,2
+Notebook 80 leaves (pack of 12),2026-11-03,1
+Notebook 80 leaves (pack of 12),2026-11-04,1
+Notebook 80 leaves (pack of 12),2026-11-05,1
+Notebook 80 leaves (pack of 12),2026-11-06,1
+Notebook 80 leaves (pack of 12),2026-11-07,2
+Notebook 80 leaves (pack of 12),2026-11-08,2
+Notebook 80 leaves (pack of 12),2026-11-09,1
+Notebook 80 leaves (pack of 12),2026-11-10,1
+Notebook 80 leaves (pack of 12),2026-11-11,2
+Notebook 80 leaves (pack of 12),2026-11-13,1
+Notebook 80 leaves (pack of 12),2026-11-15,1
+Notebook 80 leaves (pack of 12),2026-11-16,1
+Notebook 80 leaves (pack of 12),2026-11-17,1
+Ballpen Blue (box of 50),2026-10-19,1
+Ballpen Blue (box of 50),2026-10-20,2
+Ballpen Blue (box of 50),2026-10-23,2
+Ballpen Blue (box of 50),2026-10-24,2
+Ballpen Blue (box of 50),2026-10-25,1
+Ballpen Blue (box of 50),2026-10-26,1
+Ballpen Blue (box of 50),2026-10-27,1
+Ballpen Blue (box of 50),2026-10-28,2
+Ballpen Blue (box of 50),2026-10-29,1
+Ballpen Blue (box of 50),2026-10-30,1
+Ballpen Blue (box of 50),2026-10-31,1
+Ballpen Blue (box of 50),2026-11-01,1
+Ballpen Blue (box of 50),2026-11-02,1
+Ballpen Blue (box of 50),2026-11-03,1
+Ballpen Blue (box of 50),2026-11-04,1
+Ballpen Blue (box of 50),2026-11-07,1
+Ballpen Blue (box of 50),2026-11-08,1
+Ballpen Blue (box of 50),2026-11-09,1
+Ballpen Blue (box of 50),2026-11-10,1
+Ballpen Blue (box of 50),2026-11-12,1
+Ballpen Blue (box of 50),2026-11-14,1
+Ballpen Blue (box of 50),2026-11-15,2
+Bond Paper A4 (box of 5 reams),2026-10-23,1
+Bond Paper A4 (box of 5 reams),2026-10-24,1
+Bond Paper A4 (box of 5 reams),2026-10-25,1
+Bond Paper A4 (box of 5 reams),2026-10-26,1
+Bond Paper A4 (box of 5 reams),2026-10-27,1
+Bond Paper A4 (box of 5 reams),2026-10-29,1
+Bond Paper A4 (box of 5 reams),2026-10-30,1
+Bond Paper A4 (box of 5 reams),2026-11-01,1
+Bond Paper A4 (box of 5 reams),2026-11-08,1
+Bond Paper A4 (box of 5 reams),2026-11-11,1
+Bond Paper A4 (box of 5 reams),2026-11-12,1
+Bond Paper A4 (box of 5 reams),2026-11-15,1
+Paracetamol 500 mg (box of 100),2026-10-19,1
+Paracetamol 500 mg (box of 100),2026-10-25,1
+Paracetamol 500 mg (box of 100),2026-10-26,1
+Paracetamol 500 mg (box of 100),2026-10-27,1
+Paracetamol 500 mg (box of 100),2026-10-30,1
+Paracetamol 500 mg (box of 100),2026-11-01,1
+Paracetamol 500 mg (box of 100),2026-11-03,1
+Paracetamol 500 mg (box of 100),2026-11-06,1
+Paracetamol 500 mg (box of 100),2026-11-08,1
+Paracetamol 500 mg (box of 100),2026-11-09,1
+Paracetamol 500 mg (box of 100),2026-11-13,1
+Paracetamol 500 mg (box of 100),2026-11-14,1
+Alcohol 70% 500 mL (case of 12),2026-10-20,1
+Alcohol 70% 500 mL (case of 12),2026-10-21,1
+Alcohol 70% 500 mL (case of 12),2026-10-22,1
+Alcohol 70% 500 mL (case of 12),2026-10-23,1
+Alcohol 70% 500 mL (case of 12),2026-10-25,1
+Alcohol 70% 500 mL (case of 12),2026-10-26,1
+Alcohol 70% 500 mL (case of 12),2026-10-28,1
+Alcohol 70% 500 mL (case of 12),2026-10-30,1
+Alcohol 70% 500 mL (case of 12),2026-10-31,1
+Alcohol 70% 500 mL (case of 12),2026-11-01,1
+Alcohol 70% 500 mL (case of 12),2026-11-02,1
+Alcohol 70% 500 mL (case of 12),2026-11-03,1
+Alcohol 70% 500 mL (case of 12),2026-11-04,1
+Alcohol 70% 500 mL (case of 12),2026-11-06,1
+Alcohol 70% 500 mL (case of 12),2026-11-07,2
+Alcohol 70% 500 mL (case of 12),2026-11-08,1
+Alcohol 70% 500 mL (case of 12),2026-11-09,1
+Alcohol 70% 500 mL (case of 12),2026-11-10,1
+Alcohol 70% 500 mL (case of 12),2026-11-12,1
+Alcohol 70% 500 mL (case of 12),2026-11-14,1
+Alcohol 70% 500 mL (case of 12),2026-11-15,2
+Alcohol 70% 500 mL (case of 12),2026-11-17,1
+Vitamin C 500 mg (bottle of 100),2026-10-21,1
+Vitamin C 500 mg (bottle of 100),2026-10-23,1
+Vitamin C 500 mg (bottle of 100),2026-10-24,1
+Vitamin C 500 mg (bottle of 100),2026-10-30,1
+Vitamin C 500 mg (bottle of 100),2026-10-31,1
+Vitamin C 500 mg (bottle of 100),2026-11-01,1
+Vitamin C 500 mg (bottle of 100),2026-11-03,1
+Vitamin C 500 mg (bottle of 100),2026-11-05,1
+Vitamin C 500 mg (bottle of 100),2026-11-06,1
+Vitamin C 500 mg (bottle of 100),2026-11-08,1
+Vitamin C 500 mg (bottle of 100),2026-11-11,1
+Vitamin C 500 mg (bottle of 100),2026-11-12,1
+Vitamin C 500 mg (bottle of 100),2026-11-14,1
+Vitamin C 500 mg (bottle of 100),2026-11-16,1
+Vitamin C 500 mg (bottle of 100),2026-11-17,1
