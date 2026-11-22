@@ -36,7 +36,10 @@
   function send(type, data) {
     window.parent.postMessage(Object.assign({ isStreamlitMessage: true, type: type }, data || {}), "*");
   }
-  function setHeight() { send("streamlit:setFrameHeight", { height: document.documentElement.scrollHeight + 4 }); }
+  // Measure the content itself, not the page. documentElement.scrollHeight never goes below the frame's current height,
+  // so a tall frame would never shrink and left a large blank gap under the camera.
+  var boxEl = document.getElementById("box");
+  function setHeight() { send("streamlit:setFrameHeight", { height: Math.ceil(boxEl.getBoundingClientRect().height) + 8 }); }
   function setValue(value) { send("streamlit:setComponentValue", { value: value, dataType: "json" }); }
 
   var startBtn = document.getElementById("start");
@@ -105,6 +108,16 @@
       await video.play();
     } catch (err) { stop(); say(explain(err), "err"); return; }
 
+    // Watch the camera itself. If Windows or another app takes it away, the page would otherwise sit on a black
+    // picture with the Stop button showing. Tell the user and reset, so Start camera works again.
+    var track = stream.getVideoTracks()[0];
+    if (track) {
+      console.info("Camera in use:", track.label, track.getSettings && track.getSettings().width);
+      track.addEventListener("ended", function () {
+        if (running) stop("The camera stopped sending pictures, because another app may have taken it. Close other camera apps and press Start camera again.");
+      });
+    }
+
     detector = null;
     if ("BarcodeDetector" in window) {
       try {
@@ -161,6 +174,8 @@
   window.addEventListener("message", function (event) {
     if (event.data && event.data.type === "streamlit:render") setHeight();
   });
+  if (window.ResizeObserver) new ResizeObserver(setHeight).observe(boxEl);   // re-measure whenever the camera box appears, loads or disappears
+  video.addEventListener("loadedmetadata", setHeight);
   send("streamlit:componentReady", { apiVersion: 1 });
   setHeight();
 })();
