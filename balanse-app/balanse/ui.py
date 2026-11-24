@@ -54,7 +54,7 @@ CSS = """
 header[data-testid="stHeader"] { background:transparent; }
 [data-testid="stVerticalBlock"] { gap:.6rem; }
 h1 { font-size:40px !important; font-weight:700 !important; letter-spacing:-.02em; line-height:1.15 !important; padding:0 0 .5rem !important; margin:0; color:#0F1B2D; position:relative; }
-h1::after { content:""; display:block; width:150px; height:5px; margin-top:8px; background:linear-gradient(90deg,#2F6FE0,#5B7A86); }
+h1::after { content:""; display:block; width:150px; height:6px; margin-top:8px; background:#0F1B2D; clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%); }
 h2, h3 { font-weight:600 !important; letter-spacing:0; }
 h3 { font-size:18px !important; }
 p, li, label { color:var(--text); }
