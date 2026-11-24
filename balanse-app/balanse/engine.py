@@ -203,16 +203,16 @@ def target_stock(avg_daily_sales, target_days_of_supply) -> Optional[Fraction]:
     return to_fraction(avg_daily_sales) * to_fraction(target_days_of_supply)
 
 
-def suggested_reorder_quantity(current_stock, avg_daily_sales, target_days_of_supply) -> Optional[Fraction]:
-    """Suggested reorder quantity = target stock - current stock, never below 0.
+def suggested_reorder_quantity(current_stock, avg_daily_sales, target_days_of_supply, on_order=0) -> Optional[Fraction]:
+    """Suggested reorder quantity = target stock - (current stock + units on order), never below 0.
 
-    Units already on order are NOT counted (the paper says the formula does
-    not yet count them). This is a quantity for the user to review, not an order.
+    Units already ordered from the supplier but not yet received (on_order) count
+    as stock that is on its way. This is a quantity for the user to review, not an order.
     """
     target = target_stock(avg_daily_sales, target_days_of_supply)
     if target is None:
         return None
-    return max(Fraction(0), target - to_fraction(current_stock))
+    return max(Fraction(0), target - (to_fraction(current_stock) + to_fraction(on_order or 0)))
 
 
 def excess_units(current_stock, avg_daily_sales, max_days_of_supply) -> Optional[Fraction]:
@@ -324,7 +324,8 @@ def analyze_product(
     excess = excess_units(stock, ads, settings.max_days_of_supply)
     excess_value = estimated_excess_value(excess, unit_cost)
     target = target_stock(ads, settings.target_days_of_supply)
-    reorder = suggested_reorder_quantity(stock, ads, settings.target_days_of_supply)
+    on_order = to_fraction(product.get("on_order_units") or 0)
+    reorder = suggested_reorder_quantity(stock, ads, settings.target_days_of_supply, on_order)
 
     reason, rule = explain(
         status, stock=stock, ads=ads, dos=dos, lead=lead, buffer_days=settings.buffer_days,
@@ -343,6 +344,7 @@ def analyze_product(
         "name": product.get("name"),
         "category": product.get("category"),
         "current_stock": num(stock),
+        "on_order_units": num(on_order),
         "unit_cost": num(unit_cost),
         "lead_time_days": lead,
         "period_start": start,

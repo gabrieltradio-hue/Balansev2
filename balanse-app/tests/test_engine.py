@@ -152,3 +152,21 @@ def test_large_data_set_is_fast():
     elapsed = time.perf_counter() - started
     assert len(results) == 1000
     assert elapsed < 10, f"took {elapsed:.1f} seconds"
+
+
+def test_units_on_order_reduce_the_reorder_suggestion():
+    # target = 8 per day x 14 days = 112; stock 18
+    assert engine.suggested_reorder_quantity(18, 8, 14) == 94            # no on-order: unchanged behaviour
+    assert engine.suggested_reorder_quantity(18, 8, 14, 0) == 94
+    assert engine.suggested_reorder_quantity(18, 8, 14, 50) == 44        # 112 - (18 + 50)
+    assert engine.suggested_reorder_quantity(18, 8, 14, 100) == 0        # already ordered enough: never negative
+
+
+def test_on_order_units_are_reported_and_used_in_analyze_product():
+    settings = Settings(sales_period_days=30, buffer_days=3, max_days_of_supply=30, target_days_of_supply=14)
+    product = {"id": 1, "name": "Cola", "category": "Drinks", "current_stock": 18, "unit_cost": 10,
+               "lead_time_days": 5, "on_order_units": 50}
+    sales = [(TODAY - timedelta(days=i), 8) for i in range(0, 30)]   # exactly the 30-day window, 8 units a day
+    result = analyze_product(product, sales, [], settings, TODAY)
+    assert result["on_order_units"] == 50
+    assert result["suggested_reorder_units"] == 44
