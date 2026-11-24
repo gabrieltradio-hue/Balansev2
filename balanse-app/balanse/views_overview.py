@@ -27,7 +27,7 @@ def dashboard() -> None:
         ui.empty_state()
         return
     st.markdown(f'<div class="bal-sub">{data["as_of"]:%b %d, %Y}</div>', unsafe_allow_html=True)
-    st.markdown(ui.key_strip(results), unsafe_allow_html=True)
+    ui.status_tiles(results)
 
     left, right = st.columns([2.2, 1], gap="large")
     with left:
@@ -132,12 +132,13 @@ def inventory() -> None:
     if not results:
         ui.empty_state()
         return
-    st.markdown(ui.key_strip(results), unsafe_allow_html=True)
+    ui.status_tiles(results)
 
     a, b, c, d, e = st.columns([2, 1.8, 1.5, 1.5, 1.7])
     chosen_products = a.multiselect("Product", sorted({r["name"] for r in results}), placeholder="All products", label_visibility="collapsed")
     ui.status_option_css(list(ALL_STATUSES), "Status")
-    statuses = b.multiselect("Status", ALL_STATUSES, format_func=ui.status_text, placeholder="All statuses", label_visibility="collapsed")
+    statuses = b.multiselect("Status", ALL_STATUSES, format_func=ui.status_text, placeholder="All statuses", label_visibility="collapsed",
+                             key="inv-status")
     categories = sorted({r["category"] for r in results})
     chosen_categories = c.multiselect("Category", categories, placeholder="All categories", label_visibility="collapsed")
     layout = d.selectbox("Layout", ["Grouped by status", "One list"], label_visibility="collapsed")
@@ -245,7 +246,7 @@ def stock_alerts() -> None:
     done = [a for a in alerts if a["reviewed"]]
     ui.status_option_css([s for s in ALL_STATUSES if s != OPTIMAL], "Show")
     statuses = st.multiselect("Show", [s for s in ALL_STATUSES if s != OPTIMAL], format_func=ui.status_text, placeholder="All warnings",
-                              label_visibility="collapsed")
+                              label_visibility="collapsed", key="alerts-show")
     keep = lambda a: not statuses or a["classification"] in statuses   # noqa: E731
     tab_pending, tab_done = st.tabs([f"To review ({len(pending)})", f"Reviewed ({len(done)})"])
     with tab_pending:
@@ -286,7 +287,7 @@ def reorder_recommendations() -> None:
                     st.rerun()
 
         st.markdown(f'<div class="bal-mono" style="font-size:13px;line-height:1.7;color:var(--text2)">target stock = sells per day × {settings.target_days_of_supply} target days<br>'
-                    'suggested quantity = target stock − current stock, never below 0 (rounded up to whole units)</div>', unsafe_allow_html=True)
+                    'suggested quantity = target stock − (current stock + units on order), never below 0 (rounded up to whole units)</div>', unsafe_allow_html=True)
     only_needed = st.toggle("Only products with a quantity to review", value=True)
     rows = [r for r in results if not only_needed or (r["suggested_reorder_units"] or 0) > 0]
     if not rows:

@@ -60,7 +60,7 @@ Floating-point arithmetic rounds. A product whose days of supply land exactly on
 `suggested_reorder_quantity()`:
 
 - Target stock = average daily sales times target days of supply
-- Suggested quantity = target stock minus current stock, never below 0, then rounded **up** to a whole unit (you cannot order part of a unit)
+- Suggested quantity = target stock minus (current stock + units on order), never below 0, then rounded **up** to a whole unit (you cannot order part of a unit)
 
 Limits we state openly: it does not count units already on order, and it is a quantity to *review*, not an order.
 
@@ -110,7 +110,7 @@ It lets the whole system be written in Python, the same language as the calculat
 ## Q15. What are the limitations?
 
 - Default limits (30 days, 3 buffer days, 14 target days) are provisional until the key informant interviews fix them.
-- Units already on order are not counted in the reorder suggestion.
+- Units already on order (entered per product) are counted in the reorder suggestion, so ordered-but-not-received stock is not ordered twice.
 - The price market module is a placeholder.
 - No logins; anyone who opens the app sees all stores.
 - It supports decisions only: it does not place orders or change stock by itself.
