@@ -53,7 +53,7 @@ CSS = """
 .block-container { max-width:1120px; padding-top:1rem; padding-bottom:3rem; }
 header[data-testid="stHeader"] { background:transparent; }
 [data-testid="stVerticalBlock"] { gap:.6rem; }
-h1 { font-size:40px !important; font-weight:700 !important; letter-spacing:-.02em; line-height:1.15 !important; padding:0 !important; margin:0; color:#0F1B2D; position:relative; }
+h1 { font-size:40px !important; font-weight:700 !important; letter-spacing:-.02em; line-height:1.15 !important; padding:0 0 1rem !important; margin:0; color:#0F1B2D; position:relative; }
 h1::after { content:""; display:block; width:150px; height:6px; margin-top:2px; background:#0F1B2D; clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%); }
 h2, h3 { font-weight:600 !important; letter-spacing:0; }
 h3 { font-size:18px !important; }
@@ -196,9 +196,9 @@ div:has(> .st-key-card-excess) { display:flex; flex-direction:column; height:100
 .st-key-tile-no-sales button { background:#6B7588 !important; border-color:#6B7588 !important; color:#FFFFFF !important; }
 .st-key-tile-optimal button { background:#7DBF9A !important; border-color:#7DBF9A !important; color:#0F1B2D !important; }
 .st-key-tile-overstock button { background:#62769A !important; border-color:#62769A !important; color:#FFFFFF !important; }
-[class*="st-key-tile-"] button { min-height:92px; justify-content:flex-start; align-items:flex-start; text-align:left; padding:12px 14px; border-radius:8px; }
-[class*="st-key-tile-"] button p { color:inherit !important; font-size:14px; font-weight:500; line-height:1.3; margin:0; }
-[class*="st-key-tile-"] button strong { font-size:26px; font-weight:600; font-variant-numeric:tabular-nums; }
+[class*="st-key-tile-"] button { min-height:84px; justify-content:flex-start; align-items:flex-start; text-align:left; padding:8px 10px; border-radius:8px; }
+[class*="st-key-tile-"] button p { color:inherit !important; font-size:17px; font-weight:600; line-height:1.2; margin:0; }
+[class*="st-key-tile-"] button strong { font-size:36px; font-weight:600; line-height:1.1; font-variant-numeric:tabular-nums; }
 [class*="st-key-tile-"] button:hover { filter:brightness(1.08); }
 
 /* rows in lists */
@@ -551,7 +551,8 @@ def status_tiles(results: list) -> None:
     order = [STOCKOUT, UNDERSTOCK, NO_SALES, OPTIMAL, OVERSTOCK]
     columns = st.columns(len(order), gap="small")
     for column, status in zip(columns, order):
-        slug = status.lower().replace(" ", "-")
+        # short, fixed names: the colour rules above are written for exactly these (a status name like "Stockout risk" would not match)
+        slug = {STOCKOUT: "stockout", UNDERSTOCK: "understock", NO_SALES: "no-sales", OPTIMAL: "optimal", OVERSTOCK: "overstock"}[status]
         if column.button(f"**{counts[status]}**  \n{TILE_LABEL[status]}", key=f"tile-{slug}", use_container_width=True,
                          help=STATUS_MEANING[status]):
             if status == OPTIMAL:
