@@ -24,14 +24,14 @@ informant interviews (N4 to N7). The interviews in Appendix B do not give number
 | Average daily sales | Units sold in the sales period ÷ number of days the product was in stock | Feature 2 |
 | Days of supply | Current stock ÷ average daily sales | Feature 2, Table 5 note |
 | Target stock | Average daily sales × target days of supply | Feature 6 |
-| Suggested reorder quantity | Target stock − current stock, never below 0 | Feature 6 |
+| Suggested reorder quantity | Target stock − (current stock + units on order), never below 0 | Feature 6 |
 | Excess units | Current stock − (maximum days × average daily sales), never below 0 | Feature 9 |
 | Estimated excess stock value | Excess units × unit cost | Feature 9 |
 | Estimated days until stockout | Current stock ÷ average daily sales | Feature 10 |
 
 Worked example: stock 100, 50 units sold, 10 days in stock → 50 ÷ 10 = 5 a day → 100 ÷ 5 = 20 days of supply.
 
-The suggested reorder quantity does **not** count units already on order (the paper says so).
+The suggested reorder quantity counts units already on order as stock on its way. The paper did not include this yet; the app adds it as an extension.
 It is a quantity for the user to review. BALANSE never places an order.
 
 ## Classification rules (Table 5)

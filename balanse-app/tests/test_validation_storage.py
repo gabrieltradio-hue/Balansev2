@@ -33,7 +33,8 @@ def frame(text: str) -> pd.DataFrame:
 def test_valid_product():
     clean, errors = validation.validate_product(GOOD, settings=Settings())
     assert errors == []
-    assert clean == {"name": "Demo Tea", "category": "Beverages", "current_stock": 40.0, "unit_cost": 12.5, "lead_time_days": 5}
+    assert clean == {"name": "Demo Tea", "category": "Beverages", "current_stock": 40.0, "unit_cost": 12.5, "lead_time_days": 5,
+                     "on_order_units": 0}
 
 
 @pytest.mark.parametrize("change,expected", [
@@ -409,3 +410,39 @@ def test_an_older_local_file_is_moved_into_main_store(tmp_path):
     assert [p["name"] for p in repo.list_products()] == ["Tea"] and len(repo.list_sales()) == 1
     assert repo.get_settings() == {"sales_period_days": 30, "buffer_days": 2, "max_days_of_supply": 40, "target_days_of_supply": 20}
     assert LocalRepository(path).list_products()[0]["name"] == "Tea"        # opening it again changes nothing
+
+
+def test_units_on_order_are_optional_and_checked():
+    clean, errors = validation.validate_product({**GOOD})
+    assert not errors and clean["on_order_units"] == 0           # blank means none
+    clean, errors = validation.validate_product({**GOOD, "on_order_units": "30"})
+    assert not errors and clean["on_order_units"] == 30
+    _, errors = validation.validate_product({**GOOD, "on_order_units": "-4"})
+    assert any("Units on order" in e for e in errors)
+    _, errors = validation.validate_product({**GOOD, "on_order_units": "2.5"})
+    assert any("whole number" in e for e in errors)
+
+
+def test_units_on_order_are_saved_and_read_back(repo):
+    saved = services.add_products(repo, [{**validation.validate_product({**GOOD, "on_order_units": "30"})[0]}])
+    assert saved[0]["on_order_units"] == 30
+    repo.update_product(saved[0]["id"], {"on_order_units": 12})
+    assert repo.list_products()[0]["on_order_units"] == 12
+
+
+def test_old_database_file_gains_the_on_order_column(tmp_path):
+    """A file created before this column existed must open and read as 0 on order."""
+    import sqlite3
+    from balanse.repository import LOCAL_SCHEMA, PRODUCTS_TABLE
+    path = tmp_path / "old.db"
+    db = sqlite3.connect(path)
+    db.executescript(LOCAL_SCHEMA)
+    db.execute("insert into stores (name, created_at) values ('Main', '2026-01-01')")
+    old_table = PRODUCTS_TABLE.format(name="products").replace("    on_order_units real not null default 0 check (on_order_units >= 0),\n", "")
+    db.executescript(old_table)
+    db.execute("insert into products (store_id, name, category, current_stock, unit_cost, lead_time_days, is_demo, created_at, updated_at) "
+               "values (1, 'Cola', 'Drinks', 5, 10, 3, 0, '2026-01-01', '2026-01-01')")
+    db.commit()
+    db.close()
+    repo = LocalRepository(str(path))
+    assert repo.list_products()[0]["on_order_units"] == 0

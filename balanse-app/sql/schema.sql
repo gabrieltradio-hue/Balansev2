@@ -31,6 +31,8 @@ create table if not exists products (
 alter table products add column if not exists store_id bigint references stores (id) on delete cascade;
 update products set store_id = (select min(id) from stores) where store_id is null;
 alter table products alter column store_id set not null;
+-- Units already ordered from the supplier but not yet received. Safe to run again.
+alter table products add column if not exists on_order_units numeric not null default 0 check (on_order_units >= 0);
 -- product names are unique inside a store, ignoring upper/lower case (the same name may exist in two stores)
 drop index if exists products_name_unique;
 create unique index if not exists products_store_name_unique on products (store_id, lower(name));

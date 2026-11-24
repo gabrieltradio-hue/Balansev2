@@ -99,8 +99,9 @@ def product_details() -> None:
                 body += "<p>A suggested quantity cannot be calculated without a sales rate.</p>"
             elif result["suggested_reorder_units"] > 0:
                 body += (f'<p>Suggested quantity to review: <strong class="bal-mono" style="color:var(--text)">{result["suggested_reorder_units"]:,} units</strong> '
-                         f'(target stock {fmt(result["target_stock"])} minus current stock {fmt(result["current_stock"])}). '
-                         f'Target = {fmt(result["avg_daily_sales"], 2)} per day × {settings.target_days_of_supply} target days. Units already on order are not counted.</p>')
+                         f'(target stock {fmt(result["target_stock"])} minus current stock {fmt(result["current_stock"])} '
+                         f'and units on order {fmt(result["on_order_units"])}). '
+                         f'Target = {fmt(result["avg_daily_sales"], 2)} per day × {settings.target_days_of_supply} target days.</p>')
             else:
                 body += "<p>Current stock is at or above the target stock, so no quantity is suggested.</p>"
             st.markdown(f'<div class="stat">{body}</div>', unsafe_allow_html=True)
@@ -132,13 +133,16 @@ def product_details() -> None:
         with st.form("edit-product"):
             name = st.text_input("Product name", product["name"])
             category = st.text_input("Product category", product["category"])
-            e1, e2, e3 = st.columns(3)
+            e1, e2, e3, e4 = st.columns(4)
             stock = e1.number_input("Current stock quantity", value=float(product["current_stock"]), step=1.0, format="%g")
             cost = e2.number_input(f"Unit cost ({ui.currency()})", value=float(product["unit_cost"]), step=1.0, format="%.2f")
             lead_in = e3.number_input("Replenishment lead time (days)", value=int(product["lead_time_days"]), step=1)
+            on_order_in = e4.number_input("Units on order", value=int(product.get("on_order_units") or 0), step=1, min_value=0,
+                                          help="Ordered from your supplier but not yet received. Reduces the suggested reorder quantity.")
             if st.form_submit_button("Save changes", type="primary"):
                 clean, errors = validation.validate_product(
-                    {"name": name, "category": category, "current_stock": stock, "unit_cost": cost, "lead_time_days": lead_in},
+                    {"name": name, "category": category, "current_stock": stock, "unit_cost": cost, "lead_time_days": lead_in,
+                     "on_order_units": on_order_in},
                     existing_names=[p["name"] for p in data["products"]], settings=settings, own_name=product["name"])
                 if errors:
                     for problem in errors:
@@ -233,14 +237,17 @@ def _tab_add_product(data: dict) -> None:
         name = st.text_input("Product name", placeholder="e.g. Cola 1.5 L (case of 12)", key=f"add-name-{n}")
         category = st.text_input("Product category", value=categories[0] if len(categories) == 1 else "",
                                  placeholder="e.g. Beverages", key=f"add-category-{n}")
-        a, b, c = st.columns(3)
+        a, b, c, d = st.columns(4)
         stock = a.number_input("Current stock quantity", value=None, step=1.0, format="%g", placeholder="units on hand", key=f"add-stock-{n}")
         cost = b.number_input(f"Unit cost ({ui.currency()})", value=None, step=1.0, format="%.2f", placeholder="cost per unit", key=f"add-cost-{n}")
         lead = c.number_input("Replenishment lead time (days)", value=None, step=1, placeholder="days to deliver", key=f"add-lead-{n}",
                               help="How many days your own supplier takes to deliver after you order.")
+        on_order = d.number_input("Units on order", value=None, step=1, min_value=0, placeholder="0 if none", key=f"add-on-order-{n}",
+                                  help="Ordered from your supplier but not yet received. Leave blank if none.")
         if st.form_submit_button("Save product", type="primary", disabled=blocked):
             clean, errors = validation.validate_product(
-                {"name": name, "category": category, "current_stock": stock, "unit_cost": cost, "lead_time_days": lead},
+                {"name": name, "category": category, "current_stock": stock, "unit_cost": cost, "lead_time_days": lead,
+                 "on_order_units": on_order},
                 existing_names=[p["name"] for p in data["products"]], settings=data["settings"])
             if errors:
                 for problem in errors:

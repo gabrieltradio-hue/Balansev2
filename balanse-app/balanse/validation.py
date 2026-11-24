@@ -168,6 +168,12 @@ def validate_product(data: Mapping, *, existing_names: Iterable[str] = (), setti
     errors.append(problem) if problem else clean.__setitem__("current_stock", stock)
     cost, problem = parse_number(data.get("unit_cost"), "Unit cost")
     errors.append(problem) if problem else clean.__setitem__("unit_cost", cost)
+    # Optional: units already ordered from the supplier but not yet received. Blank means none.
+    if _is_blank(data.get("on_order_units")):
+        clean["on_order_units"] = 0
+    else:
+        on_order, problem = parse_number(data.get("on_order_units"), "Units on order", whole=True)
+        errors.append(problem) if problem else clean.__setitem__("on_order_units", on_order)
     lead, problem = parse_number(data.get("lead_time_days"), "Replenishment lead time (days)", whole=True)
     if problem:
         errors.append(problem)
