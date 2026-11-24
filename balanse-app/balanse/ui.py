@@ -53,8 +53,8 @@ CSS = """
 .block-container { max-width:1120px; padding-top:1rem; padding-bottom:3rem; }
 header[data-testid="stHeader"] { background:transparent; }
 [data-testid="stVerticalBlock"] { gap:.6rem; }
-h1 { font-size:40px !important; font-weight:700 !important; letter-spacing:-.02em; line-height:1.15 !important; padding:0 0 .5rem !important; margin:0; color:#0F1B2D; position:relative; }
-h1::after { content:""; display:block; width:150px; height:6px; margin-top:8px; background:#0F1B2D; clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%); }
+h1 { font-size:40px !important; font-weight:700 !important; letter-spacing:-.02em; line-height:1.15 !important; padding:0 !important; margin:0; color:#0F1B2D; position:relative; }
+h1::after { content:""; display:block; width:150px; height:6px; margin-top:2px; background:#0F1B2D; clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%); }
 h2, h3 { font-weight:600 !important; letter-spacing:0; }
 h3 { font-size:18px !important; }
 p, li, label { color:var(--text); }
@@ -191,11 +191,11 @@ div:has(> .st-key-card-excess) { display:flex; flex-direction:column; height:100
 .bal-key > div.empty .n, .bal-key > div.empty .t { color:var(--muted); }
 .bal-key > div.light, .bal-key > div.light .n, .bal-key > div.light .t { color:#0F1B2D; }
 /* status tiles are buttons: each keeps its status colour, and the text sits at the top left */
-.st-key-tile-stockout button { background:#B5452F; border-color:#B5452F; color:#FFFFFF; }
-.st-key-tile-understock button { background:#2A3B57; border-color:#2A3B57; color:#FFFFFF; }
-.st-key-tile-no-sales button { background:#6B7588; border-color:#6B7588; color:#FFFFFF; }
-.st-key-tile-optimal button { background:#7DBF9A; border-color:#7DBF9A; color:#0F1B2D; }
-.st-key-tile-overstock button { background:#62769A; border-color:#62769A; color:#FFFFFF; }
+.st-key-tile-stockout button { background:#B5452F !important; border-color:#B5452F !important; color:#FFFFFF !important; }
+.st-key-tile-understock button { background:#2A3B57 !important; border-color:#2A3B57 !important; color:#FFFFFF !important; }
+.st-key-tile-no-sales button { background:#6B7588 !important; border-color:#6B7588 !important; color:#FFFFFF !important; }
+.st-key-tile-optimal button { background:#7DBF9A !important; border-color:#7DBF9A !important; color:#0F1B2D !important; }
+.st-key-tile-overstock button { background:#62769A !important; border-color:#62769A !important; color:#FFFFFF !important; }
 [class*="st-key-tile-"] button { min-height:92px; justify-content:flex-start; align-items:flex-start; text-align:left; padding:12px 14px; border-radius:8px; }
 [class*="st-key-tile-"] button p { color:inherit !important; font-size:14px; font-weight:500; line-height:1.3; margin:0; }
 [class*="st-key-tile-"] button strong { font-size:26px; font-weight:600; font-variant-numeric:tabular-nums; }

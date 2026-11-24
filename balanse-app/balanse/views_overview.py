@@ -26,7 +26,6 @@ def dashboard() -> None:
     if not results:
         ui.empty_state()
         return
-    st.markdown(f'<div class="bal-sub">{data["as_of"]:%b %d, %Y}</div>', unsafe_allow_html=True)
     ui.status_tiles(results)
 
     left, right = st.columns([2.2, 1], gap="large")
