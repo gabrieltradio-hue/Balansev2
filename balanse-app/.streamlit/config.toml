@@ -1,0 +1,14 @@
+[theme]
+base = "light"
+primaryColor = "#4E6283"
+backgroundColor = "#F4F6F4"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#111A15"
+font = "Outfit:https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap, sans-serif"
+headingFont = "Outfit, sans-serif"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

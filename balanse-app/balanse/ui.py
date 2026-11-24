@@ -190,6 +190,16 @@ div:has(> .st-key-card-excess) { display:flex; flex-direction:column; height:100
 .bal-key > div.empty { background:var(--panel2); }
 .bal-key > div.empty .n, .bal-key > div.empty .t { color:var(--muted); }
 .bal-key > div.light, .bal-key > div.light .n, .bal-key > div.light .t { color:#0F1B2D; }
+/* status tiles are buttons: each keeps its status colour, and the text sits at the top left */
+.st-key-tile-stockout button { background:#B5452F; border-color:#B5452F; color:#FFFFFF; }
+.st-key-tile-understock button { background:#2A3B57; border-color:#2A3B57; color:#FFFFFF; }
+.st-key-tile-no-sales button { background:#6B7588; border-color:#6B7588; color:#FFFFFF; }
+.st-key-tile-optimal button { background:#7DBF9A; border-color:#7DBF9A; color:#0F1B2D; }
+.st-key-tile-overstock button { background:#62769A; border-color:#62769A; color:#FFFFFF; }
+[class*="st-key-tile-"] button { min-height:92px; justify-content:flex-start; align-items:flex-start; text-align:left; padding:12px 14px; border-radius:8px; }
+[class*="st-key-tile-"] button p { color:inherit !important; font-size:14px; font-weight:500; line-height:1.3; margin:0; }
+[class*="st-key-tile-"] button strong { font-size:26px; font-weight:600; font-variant-numeric:tabular-nums; }
+[class*="st-key-tile-"] button:hover { filter:brightness(1.08); }
 
 /* rows in lists */
 .bal-nm { font-weight:500; }
@@ -528,6 +538,28 @@ def key_strip(results: list) -> str:
         return (f'<div class="{empty} {light}" style="--c:{STATUS_STYLE[s]["color"]}" title="{escape(STATUS_MEANING[s])}">'
                 f'<div class="n">{counts[s]}</div><div class="t">{escape(s)}</div></div>')
     return '<div class="bal-key">' + "".join(tile(s) for s in order) + '</div>'
+
+
+TILE_LABEL = {STOCKOUT: "Stockout risk", UNDERSTOCK: "Understock risk", NO_SALES: "No recent sales",
+              OPTIMAL: "Optimal", OVERSTOCK: "Overstock risk"}
+
+
+def status_tiles(results: list) -> None:
+    """The five status tiles. Each tile is a button that opens its products: Stock Alerts for the warnings,
+    Inventory for Optimal, with that status already picked in the filter."""
+    counts = {s: sum(1 for r in results if r["status"] == s) for s in STATUS_STYLE}
+    order = [STOCKOUT, UNDERSTOCK, NO_SALES, OPTIMAL, OVERSTOCK]
+    columns = st.columns(len(order), gap="small")
+    for column, status in zip(columns, order):
+        slug = status.lower().replace(" ", "-")
+        if column.button(f"**{counts[status]}**  \n{TILE_LABEL[status]}", key=f"tile-{slug}", use_container_width=True,
+                         help=STATUS_MEANING[status]):
+            if status == OPTIMAL:
+                st.session_state["inv-status"] = [OPTIMAL]
+                go("inventory")
+            else:
+                st.session_state["alerts-show"] = [status]
+                go("stock_alerts")
 
 
 def figs(items: list[tuple]) -> str:

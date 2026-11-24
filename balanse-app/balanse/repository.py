@@ -76,6 +76,7 @@ class Repository:
         row["current_stock"] = float(row["current_stock"])
         row["unit_cost"] = float(row["unit_cost"])
         row["lead_time_days"] = int(row["lead_time_days"])
+        row["on_order_units"] = float(row.get("on_order_units") or 0)
         row["is_demo"] = bool(row.get("is_demo"))
         row["created_on"] = _to_date(row.get("created_at"))
         return row
@@ -114,6 +115,7 @@ create table {name} (
     is_demo integer not null default 0,
     created_at text not null,
     updated_at text not null,
+    on_order_units real not null default 0 check (on_order_units >= 0),
     unique (store_id, name)
 );"""
 
@@ -206,7 +208,10 @@ class LocalRepository(Repository):
         columns = [r["name"] for r in db.execute("pragma table_info(products)").fetchall()]
         if not columns:                                            # a brand new file
             db.executescript(PRODUCTS_TABLE.format(name="products"))
-        elif "store_id" not in columns:                            # a file from before stores existed
+        elif "on_order_units" not in columns and "store_id" in columns:   # a file from before on-order units existed
+            db.execute("alter table products add column on_order_units real not null default 0 check (on_order_units >= 0)")
+            db.commit()
+        if columns and "store_id" not in columns:                  # a file from before stores existed
             db.executescript("pragma foreign_keys = off;")
             db.executescript("begin;" + PRODUCTS_TABLE.format(name="products_new") + f"""
                 insert into products_new (id, store_id, name, category, current_stock, unit_cost, lead_time_days, is_demo, created_at, updated_at)
@@ -297,10 +302,10 @@ class LocalRepository(Repository):
         try:
             for p in products:
                 cursor = self._db.execute(
-                    "insert into products (store_id, name, category, current_stock, unit_cost, lead_time_days, is_demo, created_at, updated_at) "
-                    "values (?,?,?,?,?,?,?,?,?)",
+                    "insert into products (store_id, name, category, current_stock, unit_cost, lead_time_days, is_demo, created_at, updated_at, on_order_units) "
+                    "values (?,?,?,?,?,?,?,?,?,?)",
                     (self.store_id, p["name"], p["category"], p["current_stock"], p["unit_cost"], p["lead_time_days"], int(is_demo),
-                     p.get("created_at") or now, now))
+                     p.get("created_at") or now, now, p.get("on_order_units") or 0))
                 ids.append(cursor.lastrowid)
             self._db.commit()
         except sqlite3.IntegrityError as exc:
@@ -316,7 +321,7 @@ class LocalRepository(Repository):
         return [found[i] for i in ids]
 
     def update_product(self, product_id, fields: dict) -> None:
-        allowed = {k: v for k, v in fields.items() if k in ("name", "category", "current_stock", "unit_cost", "lead_time_days")}
+        allowed = {k: v for k, v in fields.items() if k in ("name", "category", "current_stock", "unit_cost", "lead_time_days", "on_order_units")}
         if not allowed:
             return
         sets = ", ".join(f"{k} = ?" for k in allowed) + ", updated_at = ?"
@@ -479,6 +484,7 @@ class SupabaseRepository(Repository):
         sid = self._sid()
         payload = [{"store_id": sid, "name": p["name"], "category": p["category"], "current_stock": p["current_stock"],
                     "unit_cost": p["unit_cost"], "lead_time_days": p["lead_time_days"], "is_demo": is_demo,
+                    "on_order_units": p.get("on_order_units") or 0,
                     "created_at": p.get("created_at") or now, "updated_at": now} for p in products]
         for part in _chunks(payload):
             saved += self._do(lambda part=part: self._client.table("products").insert(part).execute(), "save the products")
@@ -486,7 +492,7 @@ class SupabaseRepository(Repository):
         return [by_name[p["name"].lower()] for p in products if p["name"].lower() in by_name]
 
     def update_product(self, product_id, fields: dict) -> None:
-        allowed = {k: v for k, v in fields.items() if k in ("name", "category", "current_stock", "unit_cost", "lead_time_days")}
+        allowed = {k: v for k, v in fields.items() if k in ("name", "category", "current_stock", "unit_cost", "lead_time_days", "on_order_units")}
         if not allowed:
             return
         allowed["updated_at"] = _now()
