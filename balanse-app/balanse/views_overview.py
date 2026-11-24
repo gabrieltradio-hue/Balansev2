@@ -286,7 +286,7 @@ def reorder_recommendations() -> None:
                     st.rerun()
 
         st.markdown(f'<div class="bal-mono" style="font-size:13px;line-height:1.7;color:var(--text2)">target stock = sells per day × {settings.target_days_of_supply} target days<br>'
-                    'suggested quantity = target stock − current stock, never below 0 (rounded up to whole units)</div>', unsafe_allow_html=True)
+                    'suggested quantity = target stock − (current stock + units on order), never below 0 (rounded up to whole units)</div>', unsafe_allow_html=True)
     only_needed = st.toggle("Only products with a quantity to review", value=True)
     rows = [r for r in results if not only_needed or (r["suggested_reorder_units"] or 0) > 0]
     if not rows:
